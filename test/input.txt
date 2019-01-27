@@ -27,6 +27,12 @@
   add Valid Name p/not_numbers e/valid@e.mail
   add Valid Name p/12345 e/notAnEmail
 
+  # should catch invalid phone data
+  add Valid Name p/00 e/valid@e.mail
+
+  # should catch invalid email data
+  add Valid Name p/12345 e/this;email@contains.semicolon
+
   # should add correctly
   add Adam Brown p/111111 e/adam@gmail.com
   list
